@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 
 <head>
@@ -11,9 +13,9 @@
 		<img alt="" class="avatar" src="images/avtar_login.jpg">
 		<h2>LOG IN</h2>
 		<form action="login_session.php"  method = "post" enctype="multipart/form-data" >
-			<p>Username</p><input placeholder="Enter Username" name = "Username" type="text">
-            <p>Passwrod</p><input placeholder="Enter Password" name = "Password" type="password">
-            <input type="submit" value="Sign in"> 
+			<p>Username</p><input placeholder="Enter Username" name = "username" type="text">
+            <p>Passwrod</p><input placeholder="Enter Password" name = "password" type="password">
+            <input type="submit" name="submit" value="Sign in"> 
             <div class="reg">
             <p>Dont have an Account??</p>
             <a href="user_register.php">Register Now</a>
@@ -23,9 +25,9 @@
     </div>
    
     <?php
-		if (isset($_REQUEST['success'])) {
+	 	/*if (isset($_REQUEST['success'])) {
 			echo '<script>alert("Username or password incorrect")</script>';
-		}
+		}*/
     ?>
     
 

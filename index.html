@@ -48,7 +48,7 @@
                         <a class="nav-link" href="user_register.php">SignUp</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">ContactUS</a>
+                        <a class="nav-link" href="#con">ContactUS</a>
                     </li>
                 </ul>
              </div>
@@ -102,7 +102,7 @@
           
             <section id="slideshow">
 
-              
+                  <h2>GALLERY</h2>
                   <div class="carousel" data-flickity='{"wrapAround": true, "autoPlay":true}'>
                       <div class="carousel-cell">
                         <img src="images/bch2.jpg" alt="beach2">
@@ -120,8 +120,32 @@
           
               
             </section>
-          
-          
+            <!-- Contact Us -->
+           
+           <section id="contact">
+             <h3 id="con">CONTACT US</h3>
+              <div class="container">
+                <form action="index.html">
+              
+                  <label for="fname">Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="Your name.." required >
+              
+                  <label for="lname">Email</label>
+                  <input type="email" id="lname" name="lastname" placeholder="Your Email ID.." required>
+              
+                  
+              
+                  <label for="subject">Your Message</label>
+                  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+                  <input type="submit" value="Submit">
+                 
+                  <!-- <script>alert("Thank You For Contacting Us")</script> -->
+                </form>
+              </div>
+
+
+
+            </section>
           
          
           

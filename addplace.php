@@ -12,6 +12,7 @@
 			</h1>
 			<br>
 			<h3><a href="logout.php" >logout</a></h3>
+			<h3><a href="place.html" >Add Place</a></h3>
 			<div class="table-resposive">
 				<table class="table table-border table-striped table-hover">
 					
@@ -23,6 +24,7 @@
 					<th>Place</th>
 					<th>Description</th>
 					<th>Place Image</th>
+					
 				</thead>
 
 				<tbody>
@@ -74,7 +76,7 @@
 							<td> <?php echo $result['description']; ?> </td>
 							
 							<td> <image src= "<?php echo $result['pimage']; ?>" height=100px width = 100px> </td>
-
+                            
 						</tr>
 
 
@@ -84,7 +86,7 @@
 
 					
 				}
-
+				  
 				?>
 
 				</tbody>

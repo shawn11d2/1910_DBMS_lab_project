@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Place List</title>
+	<title>User Feedback</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<!--Bootstrap scripts-->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -9,7 +9,6 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 </head>
 <body class="bg-info" >
-
 <nav class="navbar  navbar-expand-lg navbar-dark bg-secondary" >
 		<a class="navbar-brand" href="">TouristGuide</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +17,7 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item">
-				<a class="nav-link" href="disp_feedbk.php">ViewFeedbacks</a>
+				<a class="nav-link" href="view.php">ViewRecords</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="place.html">AddPlaces</a>
@@ -31,7 +30,7 @@
 <div class="container">
 			<br>
 			<h1 class="text-white bg-danger text-center">
-			Place LIST 
+			User Feedback 
 			</h1>
 			<br>
 			
@@ -41,13 +40,11 @@
 				<thead class="text-white bg-dark">
 					<th>ID</th>
 					
-					<th>Category</th>
-					<th>Location</th>
+					<th>Username</th>
 					<th>Place</th>
-					<th>Description</th>
-                    <th>Place Image</th>
-					<th>Edit</th>
-                    <th>Delete</th>
+					<th>Experience</th>
+					<th>Comments</th>
+					
 				</thead>
 
 				<tbody>
@@ -64,7 +61,7 @@
 
 					
 
-					$dispquery = "select * from tguide";
+					$dispquery = "select * from feedback";
 					$querydisp = mysqli_query($con,$dispquery);
 
 					
@@ -73,17 +70,17 @@
 						?>
 
 						<tr>
-							<td> <?php echo $result['id']; ?> </td>
-							
-							<td><?php echo $result['category']; ?></td>
-							<td><?php echo $result['location']; ?></td>
+							<td><?php echo $result['id']; ?></td>
+							<td><?php echo $result['username']; ?></td>
 							<td><?php echo $result['place']; ?></td>
-							<td><?php echo $result['description']; ?></td>
+							<td><?php echo $result['experience']; ?></td>
+							<td><?php echo $result['comments']; ?></td>
 							
-							<td><image src= "<?php echo $result['pimage']; ?>" height=100px width = 100px></td>
+							
+							
+							
 
-							<td><a class="btn btn-primary" href="Edit2.php?id=<?php echo $result['id']; ?>">Edit</a></td>
-							<td><a class="btn btn-primary" href="delete.php?id=<?php echo $result['id']; ?>">Delete</a></td>
+							
 						</tr>
 
 
