@@ -40,8 +40,8 @@
 			  	$sql= "insert into user(username,Email,Password) values ('$username','$Email','$Password')";
 			  	if(mysqli_query($conn,$sql))
 			  	{
-					  echo '<script>alert("Registered")</script>';  
-					  header("location:welcome.php");
+					echo "<script>alert('Registered Suceessfully!!!Please Login to Continue:')</script>";
+					echo "<script>window.open('login.php','_self')</script>";
 			  	}
 
 			  	else
